@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
+    public GameObject deathLine;
+
     private string direction;
 
     public string me {private get;  set;}  
@@ -39,19 +41,23 @@ public class PlayerController : MonoBehaviour {
         //Sağa Gidecek
         if (Input.GetKeyDown(KeyCode.D))
         {
+          moveDeathLine();
           moveRight();
         }//Sola Gidecek
         else if (Input.GetKeyDown(KeyCode.A))
         {
-             moveLeft();
+            moveDeathLine();
+            moveLeft();
         }//Yukarı Gidecek
         else if (Input.GetKeyDown(KeyCode.W))
         {
-             moveTop();
+            moveDeathLine();
+            moveTop();
         }//Aşağı gidecek
         else if (Input.GetKeyDown(KeyCode.S))
-        {
-             moveBottom();
+        {   
+            moveDeathLine();
+            moveBottom();
         }
 
     }
@@ -127,5 +133,11 @@ public class PlayerController : MonoBehaviour {
                 direction = "stay";
         }
        
+    }
+  
+    private void moveDeathLine() {
+
+        //deathLine = Instantiate(deathLine, deathLine.transform.position + new Vector3(2,0), Quaternion.identity);
+
     }
   }
