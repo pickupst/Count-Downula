@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: grass_tile_1
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: 21300000, guid: d9d9e66f67d368740b02ff764b22e8f4, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8490566, g: 0.8490566, b: 0.8490566, a: 1}
   m_Transform:
     e00: 1
     e01: 0
